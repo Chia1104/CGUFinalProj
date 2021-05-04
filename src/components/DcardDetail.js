@@ -7,18 +7,21 @@ const DcardDetail = ({ dcard }) => {
         <View style={styles.cardContainerStyle}>
             <View style={styles.box1}>
                 <Text style={styles.title}>
-                    {dcardData.dcardList[0].Title}
+                    {dcard.Title}
                 </Text>
                 <Text style={styles.content}>
-                    {dcardData.dcardList[0].Excerpt}
+                    {dcard.Excerpt}
                 </Text>
             </View>
-            <View style={styles.box1}>
-                <Text style={styles.title}>
-                    {dcardData.dcardList[0].ID}
+            <View style={styles.box2}>
+                <Text style={styles.content1}>
+                    {dcard.ID}
                 </Text>
-                <Text style={styles.content}>
-                    {dcardData.dcardList[0].CreatedAt}
+                <Text>
+                     / 
+                </Text>
+                <Text style={styles.content1}>
+                    {dcard.CreatedAt}
                 </Text>
             </View>
         </View>
@@ -28,17 +31,26 @@ const DcardDetail = ({ dcard }) => {
 const styles = StyleSheet.create({
     cardContainerStyle: {
         justifyContent: "space-between",
-        padding: 10
+        alignItems: "flex-start",
+        padding: 10,
+        margin: 10
     },
     box1: {
         flexDirection: "column",
+        width: "100%"
+    },
+    box2: {
+        flexDirection: "row",
+        width: "100%"
     },
     title: {
-        fontSize: 20
+        fontSize: 25
     },
     content: {
-        fontSize: 6,
-        numberOfLines: 20
+        fontSize: 17
+    },
+    content1: {
+        fontSize: 15
     }
 });
 

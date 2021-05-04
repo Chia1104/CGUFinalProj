@@ -1,23 +1,24 @@
 import React from "react";
 import { StyleSheet, Text, View} from "react-native";
+import dcardData from "../json/data/api.json";
 
 const DcardDetail = ({ dcard }) => {
     return (
         <View style={styles.cardContainerStyle}>
             <View style={styles.box1}>
                 <Text style={styles.title}>
-                    {dcard.Title}
+                    {dcardData.dcardList[0].Title}
                 </Text>
                 <Text style={styles.content}>
-                    {dcard.Excerpt}
+                    {dcardData.dcardList[0].Excerpt}
                 </Text>
             </View>
             <View style={styles.box1}>
                 <Text style={styles.title}>
-                    {dcard.ID}
+                    {dcardData.dcardList[0].ID}
                 </Text>
                 <Text style={styles.content}>
-                    {dcard.CreatedAt}
+                    {dcardData.dcardList[0].CreatedAt}
                 </Text>
             </View>
         </View>

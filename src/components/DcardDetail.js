@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "flex-start",
         padding: 10,
-        margin: 10
+        margin: 10,
+        backgroundColor: "#CCDDFF"
     },
     box1: {
         flexDirection: "column",
@@ -44,10 +45,12 @@ const styles = StyleSheet.create({
         width: "100%"
     },
     title: {
-        fontSize: 25
+        fontSize: 25,
+        marginBottom: 7
     },
     content: {
-        fontSize: 17
+        fontSize: 17,
+        marginBottom: 7
     },
     content1: {
         fontSize: 15

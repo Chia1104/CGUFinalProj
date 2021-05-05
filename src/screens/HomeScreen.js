@@ -7,7 +7,7 @@ const HomeScreen = ({ navigation }) => {
     return (
         <ScrollView style={{ flex: 1 }}>
             <FlatList
-                data={dcardData.dcardList}
+                data={dcardData}
                 renderItem={({ item }) =>
                     <DcardDetail
                         dcard={item}

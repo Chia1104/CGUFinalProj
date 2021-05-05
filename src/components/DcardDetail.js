@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
         alignItems: "flex-start",
         padding: 10,
         margin: 10,
-        backgroundColor: "#CCDDFF"
+        backgroundColor: "#CCDDFF",
+        borderRadius: 10
     },
     box1: {
         flexDirection: "column",
@@ -50,7 +51,8 @@ const styles = StyleSheet.create({
     },
     content: {
         fontSize: 17,
-        marginBottom: 7
+        marginBottom: 7,
+        lineHeight: 25
     },
     content1: {
         fontSize: 15

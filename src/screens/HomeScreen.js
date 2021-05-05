@@ -1,20 +1,14 @@
 import React from "react";
-import { ScrollView, FlatList } from "react-native";
-import DcardDetail from "../components/DcardDetail";
-import dcardData from "../json/data/api.json";
+import { ScrollView, FlatList, View, Text } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
     return (
         <ScrollView style={{ flex: 1 }}>
-            <FlatList
-                data={dcardData}
-                renderItem={({ item }) =>
-                    <DcardDetail
-                        dcard={item}
-                        navigation={navigation}
-                    />}
-                keyExtractor={item => item.ID}
-            />
+            <View>
+                <Text>
+                    Home
+                </Text>
+            </View>
         </ScrollView>
     );
 };

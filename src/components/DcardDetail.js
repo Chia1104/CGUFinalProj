@@ -8,13 +8,13 @@ const DcardDetail = ({ dcard }) => {
                 <Text style={styles.title}>
                     {dcard.Title}
                 </Text>
-                <Text style={styles.content}>
-                    {dcard.Excerpt}
+                <Text style={styles.content} numberOfLines={1}>
+                    {dcard.Content}
                 </Text>
             </View>
             <View style={styles.box2}>
                 <Text style={styles.content1}>
-                    {dcard.ID}
+                    {dcard.Id}
                 </Text>
                 <Text>
                      / 

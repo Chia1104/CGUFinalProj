@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, ScrollView, FlatList } from "react-native";
+import { ActivityIndicator, ScrollView, FlatList, TouchableOpacity } from "react-native";
 import DcardList from "../components/DcardList";
+import DcardDetailScreen from "./DcardDetailScreen";
 
 const PostScreen = ({ navigation }) => {
 
@@ -38,12 +39,14 @@ const PostScreen = ({ navigation }) => {
                 <FlatList
                     data={dcardData}
                     renderItem={({ item }) =>
+                        <TouchableOpacity onPress={() => navigation.navigate(DcardDetailScreen)}>
                         <DcardList
                             dcard={item}
                             navigation={navigation}
-                        />}
+                        />
+                        </TouchableOpacity>
+                }
                     keyExtractor={item => item.Id}
-                    // onPress={() => navigate(DcardDetailScreen)}
                 />
             )}
         </ScrollView>

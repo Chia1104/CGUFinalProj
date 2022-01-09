@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, ScrollView, FlatList } from "react-native";
-import DcardList from "../components/DcardList";
+import { ActivityIndicator, ScrollView, View, Text } from "react-native";
 
-const PostScreen = ({ navigation }) => {
-
+const DcardDetailScreen = () => {
     const [isLoading, setLoading] = useState(true);
     const [dcardData, setData] = useState([]);
 
-    const getDcards = async () => {
+    const getDcardDetail = async () => {
         try {
-            const response = await fetch('https://dcardanalysislaravel-sedok4caqq-de.a.run.app/api/getAllDcard', {
+            const response = await fetch('https://dcardanalysislaravel-sedok4caqq-de.a.run.app/article/', {
                 method: 'GET',
                 credentials: 'omit',
                 headers: {
@@ -29,26 +27,25 @@ const PostScreen = ({ navigation }) => {
     }
 
     useEffect(() => {
-        getDcards();
+        getDcardDetail();
     }, []);
 
     return (
         <ScrollView style={{ flex: 1 }}>
-            {isLoading ? <ActivityIndicator/> : (
-                <FlatList
-                    data={dcardData}
-                    renderItem={({ item }) =>
-                        <DcardList
-                            dcard={item}
-                            navigation={navigation}
-                        />}
-                    keyExtractor={item => item.Id}
-                    // onPress={() => navigate(DcardDetailScreen)}
-                />
-            )}
+            {/*{isLoading ? <ActivityIndicator/> : (*/}
+            {/*    <View>*/}
+            {/*        <Text>*/}
+            {/*            test*/}
+            {/*        </Text>*/}
+            {/*    </View>*/}
+            {/*)}*/}
+            <View>
+                <Text>
+                    test
+                </Text>
+            </View>
         </ScrollView>
     );
-
 };
 
-export default PostScreen;
+export default DcardDetailScreen;

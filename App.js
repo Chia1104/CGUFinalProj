@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PostScreen from './src/screens/PostScreen';
 import SettingsScreen from './src/screens/SettingsScreen.js';
 import HomeScreen from './src/screens/HomeScreen.js';
+import DcardDetailScreen from './src/screens/DcardDetailScreen.js';
 
 const Tab = createBottomTabNavigator();
 

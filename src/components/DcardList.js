@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View} from "react-native";
 
-const DcardDetail = ({ dcard }) => {
+const DcardList = ({ dcard }) => {
     return (
         <View style={styles.cardContainerStyle}>
             <View style={styles.box1}>
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default DcardDetail;
+export default DcardList;

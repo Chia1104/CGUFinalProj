@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View} from "react-native";
-import dcardData from "../json/data/api.json";
 
 const DcardDetail = ({ dcard }) => {
     return (
